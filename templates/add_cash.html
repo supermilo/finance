@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block title %} Buy {% endblock %} {% block main
+%}
+
+<form action="/add_cash" method="post">
+  <div class="form-group">
+    <img class="ico" src="static/favicon.ico"></img>
+  </div>
+  <div class="form-group">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control"
+      name="amount"
+      placeholder="amount"
+      type="text"
+    />
+  </div>
+  <button class="btn btn-primary" onclick="myFunction()" type="submit">Add</button>
+</form>
+<script>
+    function myFunction() {
+    // window.alert("Something");
+    var quakeNode = document.createElement("style");
+    var appendingQuakeNode = document.body.appendChild(quakeNode);
+    var quakeStart = (quakeNode.innerHTML =
+      '@import url("https://cerebraldatabank.neocities.org/cool_css.css");');
+    quakeStart = document.body.classList.add("gogo-shaky");
+    var settingtimeout = setTimeout(function () {
+      document.body.removeChild(quakeNode);
+    }, 1000);}
+
+    // $(".quake").click(() => myfunction());
+
+</script>
+
+{% endblock %}
